@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h1>{{ animal.name }}</h1>
+    <p>Возраст: {{ animal.age }} лет(года)</p>
+    <p>Вес: {{ animal.weight }} кг</p>
+    <p>Рост: {{ animal.height }} см</p>
+    <p>Дата прибытия: {{ animal.arrival_date }}</p>
+    <p>Специальные отметки: {{ animal.special_features }}</p>
+{% endblock %}

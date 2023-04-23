@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h1>Список животных</h1>
+    <ul>
+    {% for animal in animals %}
+        <li><a href="{% url 'animal_detail' animal.id %}">{{ animal.name }}</a></li>
+    {% empty %}
+        <li>Нет животных.</li>
+    {% endfor %}
+    </ul>
+    <a href="{% url 'animal_edit' %}">Добавить животное</a>
+{% endblock %}
